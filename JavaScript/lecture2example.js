@@ -1,0 +1,1 @@
+alert("Hello class, SPring 2026")
