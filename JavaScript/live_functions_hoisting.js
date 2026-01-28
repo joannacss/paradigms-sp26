@@ -1,5 +1,5 @@
 //DEMO: try to invoke each of them
-sayHello2();
+
 
 // function declaration
 function sayHello1(){
@@ -7,7 +7,7 @@ function sayHello1(){
 }
 
 // function expression
-var sayHello2 = function (){
+let sayHello2 = function (){
 	console.log("Hello! (2)");
 };
 
