@@ -1,5 +1,7 @@
-//DEMO: try to invoke each of them
 
+//DEMO: try to invoke each of them
+console.log(sayHello3)
+sayHello3();
 
 // function declaration
 function sayHello1(){

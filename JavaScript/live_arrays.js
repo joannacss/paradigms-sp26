@@ -9,14 +9,14 @@ function isBelowThreshold(array){
 	}
 	return true;
 }
-// const array1 = [1, 30, 39, 29, 10, 13];
-// let output1 = isBelowThreshold(array1);
-// console.log(`DEMO1 (imperative): ${output1}`);	// true
+const array1 = [1, 30, 39, 29, 10, 13];
+let output1 = isBelowThreshold(array1);
+console.log(`DEMO1 (imperative): ${output1}`);	// true
 
 
-// // DEMO 1: Array.every(callback[,thisArg]) 
-// let outputDemo1 = /* ... TODO ... */;
-// console.log(`DEMO1 (declarative): ${outputDemo1}`);
+// DEMO 1: Array.every(callback[,thisArg]) 
+let outputDemo1 = array1.every( (n) => n <= 40 );
+console.log(`DEMO1 (declarative): ${outputDemo1}`);
 
 
 // -------------------------------------------------------------------------
@@ -31,13 +31,13 @@ function getAllWords(words){
 	}
 	return result;
 }
-// const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
-// let output2 = getAllWords(words); // [exuberant,destruction,present]
-// console.log(`DEMO2 (imperative): ${output2}`); 
+const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+let output2 = getAllWords(words); // [exuberant,destruction,present]
+console.log(`DEMO2 (imperative): ${output2}`); 
 
 // DEMO2: Array.filter(callback[,thisArg]) 
-// let outputDemo2 =  /* ... TODO ... */;
-// console.log(`DEMO2 (declarative):${outputDemo2}`);
+let outputDemo2 =  words.filter((x) => x.length > 6);
+console.log(`DEMO2 (declarative):${outputDemo2}`);
 
 
 // -------------------------------------------------------------------------
@@ -51,13 +51,13 @@ function multiplyByTwo(array){
 	}
 	return result;
 }
-// const array3 = [1, 4, 9, 16];
-// let output3 = multiplyByTwo(array3);
-// console.log(`DEMO3 (imperative): ${output3}`); // [2, 8, 18, 32]
+const array3 = [1, 4, 9, 16];
+let output3 = multiplyByTwo(array3);
+console.log(`DEMO3 (imperative): ${output3}`); // [2, 8, 18, 32]
 
 // DEMO3: Array.map(callback[,thisArg])
-// let outputDemo3 = /* ... TODO ... */;
-// console.log(`DEMO3 (declarative): ${outputDemo3}`);
+let outputDemo3 = array3.map( (n) => n * 2 );
+console.log(`DEMO3 (declarative): ${outputDemo3}`);
 
 // -------------------------------------------------------------------------
 // EXAMPLE 4: imperative-style
@@ -77,12 +77,12 @@ let people = [
   { id: 56, name: 'Joe' },
   { id: 88, name: 'Jennifer' }
 ];
-// let output4 = extractIds(people);
-// console.log(`DEMO4 (imperative): ${output4}`) // [20, 24, 56, 88]
+let output4 = extractIds(people);
+console.log(`DEMO4 (imperative): ${output4}`) // [20, 24, 56, 88]
 
 // DEMO4: Using map to achieve this goal
-// let outputDemo4 = /* ... */;
-// console.log(`DEMO4 (declarative): ${outputDemo4}`) // [20, 24, 56, 88]
+let outputDemo4 = people.map((n) => n.id);
+console.log(`DEMO4 (declarative): ${outputDemo4}`) // [20, 24, 56, 88]
 
 
 // -------------------------------------------------------------------------
@@ -96,15 +96,16 @@ function computeSum(array){
 	}
 	return result;
 }
-// const array5 = [1, 2, 3, 4]; // TODO: what the output would be if array5 = [1, 2, 3, "4"]
-// let output5 = computeSum(array5);
-// console.log(`DEMO5 (imperative): ${output5}`) // 10
+const array5 = [1, 2, 3, 4]; // TODO: what the output would be if array5 = [1, 2, 3, "4"]
+let output5 = computeSum(array5);
+console.log(`DEMO5 (imperative): ${output5}`) // 10
 
 
 // DEMO5: Array.reduce(callback[,initialValue])
 // reducer(accumulator, currentValue, currentIndex, currentArray)
-// let outputDemo5 = /* ... */;
-// console.log(`DEMO5 (declarative): ${outputDemo5}`) // 10
+let callback5 = (accumulator, current) => accumulator + current;
+let outputDemo5 = array5.reduce(callback5, 10);
+console.log(`DEMO5 (declarative): ${outputDemo5}`) // 10
 
 
 
@@ -120,11 +121,14 @@ function sumOfEvenSquares(array){
 	return sum;
 }
 
-// let array6 = [4, 11, 25, 23, 8];
-// let output6 = sumOfEvenSquares(array6);
-// console.log(`DEMO6 (imperative): ${output6}`); // 80
+let array6 = [4, 11, 25, 23, 8]; 
+let output6 = sumOfEvenSquares(array6);
+console.log(`DEMO6 (imperative): ${output6}`); // 80
 
 // DEMO6: combining filter, map, reduce!
-// let outputDemo6  = /* ... TODO ... */;
-// console.log(`DEMO6 (declarative): ${outputDemo6}`); // 80
+let callback6 = (accumulator, current) => accumulator + current;
+let outputDemo6  = array6.filter((n) => n%2 ==0).map((n) => n*n).reduce(callback6);
+console.log(`DEMO6 (declarative): ${outputDemo6}`); // 80
+
+
 
