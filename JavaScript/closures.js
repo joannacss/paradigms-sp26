@@ -88,3 +88,15 @@ for(let i = 0; i < 5 ; i++){
 }
 
 
+let generator1 = nextOddNumberClosure();
+console.log(generator1()); // 1
+console.log(generator1()); // 3
+console.log(generator1()); // 5
+console.log(generator1()); // 7
+
+let generator2 = nextOddNumberClosure();
+console.log(generator2());
+console.log(generator2());
+console.log(generator2());
+console.log(generator2());
+
