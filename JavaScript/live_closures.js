@@ -6,31 +6,37 @@ function nextOddNumber(){
 	return output;
 }
 
-function userFunction1(){
-	console.log(`userFunction1 ${nextOddNumber()}`)
-	console.log(`userFunction1 ${nextOddNumber()}`)
-}
 
-function userFunction2(){
-	console.log(`userFunction2 ${nextOddNumber()}`)
-	console.log(`userFunction2 ${nextOddNumber()}`)
-}
-
-
-function userFunction3(){
-	console.log(`userFunction3 ${nextOddNumber()}`)
-	console.log(`userFunction3 ${nextOddNumber()}`)
-}
-
-
-
-userFunction1()
-userFunction2()
 
 
 // DEMO: how to use closures to solve this problem?
+function nextOddNumberGenerator(){
+	let innerCounter = 1;
+	// funciton?
+	return () => {
+		let output = innerCounter;
+		innerCounter += 2;
+		return output;
+	}
+}
 
 
+function userFunction1(generator){
+	console.log(`userFunction1 ${generator()}`) // 1
+	console.log(`userFunction1 ${generator()}`) // 3
+}
+
+function userFunction2(generator){
+	console.log(`userFunction2 ${generator()}`) // 1
+	console.log(`userFunction2 ${generator()}`) // 3
+}
+
+let generator1 = nextOddNumberGenerator();
+let generator2 = nextOddNumberGenerator();
+
+userFunction1(generator1)
+userFunction2(generator2)
+console.log(generator2()) // ?
 
 
 

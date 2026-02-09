@@ -50,7 +50,34 @@ class Graph {
   }
   // method to traverse the graph in a BFS fashion
   bfs(startNode){
-    // TODO: activity 5
+    // Initializes relevant data structures
+    let queue = [ startNode ]; // a stack initialized with the startNode
+    let visited = new Set(); // a set that tracks nodes already visited
+    let result = [];  // the output to be returned
+
+    
+    // iterate over each node to be visited (in the stack)
+    while(queue.length != 0){
+      // pop node from the stack
+      let current = queue.shift();
+      // check if node is visited
+      if (!visited.has(current)){
+        // add node to the output
+        result.push(current);
+        // mark node as visited
+        visited.add(current);
+        // traverse children nodes (left-to-right--reversed)
+        let children = this.adjacencyList.get(current); 
+        for(let i = 0; i < children.length;++i ){
+          if (!visited.has(children[i])){
+            queue.push(children[i]);
+          }
+        }
+        
+      }
+    }
+    // return the results (list of nodes)
+    return result;
   }
 
   // digraph G {
@@ -97,6 +124,7 @@ g2.addEdge(2, 1);
 g2.addEdge(3, 0);
 g2.addEdge(3, 1);
 
-console.log(g2.dfs(0));
+console.log(g2.bfs(0));
+
 
 
