@@ -1,5 +1,5 @@
 /* Add example of selector by tag: make h1, h2 colors = purple */
-
+h1 {color: yellow;}
 
 
 /* Add example of selector by class value: make .myparagraph font-size = 16pt */

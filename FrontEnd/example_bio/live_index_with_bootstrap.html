@@ -5,11 +5,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Prof. Santos' personal Website</title>
 		<!-- TODO: Add Bootstrap CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 	</head>
 	<body>
-		
+		<div class="container">
+			<div class="row">
+				<div class="col-4"><!--left-->
 					<!-- TODO: Add Divs to compose the layout -->
-					<img width="200px" src="gci-photo.jpg" alt="Prof Santos' Profile Photo" >
+					<img width="200px" src="assets/gci-photo.jpg" alt="Prof Santos' Profile Photo" >
 					<h1>Joanna C. S. Santos</h1>
 					<address>
 						<strong>University of Notre Dame</strong><br>
@@ -18,8 +21,9 @@
 						<abbr title="Phone">P:</abbr> (574) 631-0353<br>
 						<abbr title="E-mail">E:</abbr> joannacss@nd.edu
 					</address>
-		
+				</div>
 
+				<div class="col-8"><!--right-->
 					<h2>Biography:</h2>
 					<p class="">
 						<b>Joanna Cecilia da Silva Santos</b> is an Assistant Professor in the Department of Computer Science and Engineering at the University of Notre Dame (ND). She leads the <b>S</b>ecurity and <b>S</b>oftware <b>E</b>ngineering research lab (<a href="https://s2e-lab.github.io/"><b>S<sup>2</sup>E</b></a>).
@@ -27,11 +31,11 @@
 					<p>
 						Her main research areas are: 
 							<!-- TODO: render this as a badge  -->
-							<span>Software Engineering</span>
+							<span class="badge text-bg-primary">Software Engineering</span>
 							<!-- TODO: render this as a badge  -->
-							<span>Software Security</span>
+							<span class="badge text-bg-secondary">Software Security</span>
 							<!-- TODO: render this as a badge  -->
-							<span>Program Analysis</span>			
+							<span class="badge text-bg-success">Program Analysis</span>			
 					</p>
 
 					<h2>Education:</h2>
@@ -50,6 +54,16 @@
 							2013 <!-- Add TODO: span element to render this as a badge but with rounded corners -->
 						</li>
 					</ul>
+				</div>
+				
+			</div>
+		</div>
+
+		
+					
+		
+
+					
 		
 		
 	
@@ -58,7 +72,8 @@
 
 		<!-- TODO: Import Bootstrap JS -->
 		
-  
+  		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
 
 	</body>
 </html>

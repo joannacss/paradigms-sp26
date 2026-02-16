@@ -5,21 +5,24 @@
       
 
       <style>
-         
+         h2 {font-size: 20px;}
+         #result-parent {color: blue;}
+
+         .myHeading { font-family: Arial; } 
       </style>
-      <link rel="stylesheet" type="text/css" href="weather.css">
+      <link rel="stylesheet" href="weather.css">
    </head>
    <body>
       <h1>Temperature Conversion</h1>
       <div>
-         <h2 class='myHeading'> Enter temperature in Fahrenheit</h2>
+         <h2 class='myHeading' style="color: purple;"> Enter temperature in Fahrenheit</h2>
          <input type="number" id="temperature"></input>
          <button class="btn" onclick="toCelsius()">Convert to Celsius</button>   
       </div>
       
-      <div id="result-parent">
+      <div id="result-parent" class='myHeading'>
          The Temperature in Celsius is
-         <span id="result"></span>
+         <span id="result">jkdkljdkjsalkldjas</span>
       </div>
       <script type="text/javascript" src="weather.js">
          
