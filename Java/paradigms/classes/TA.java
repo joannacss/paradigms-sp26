@@ -1,5 +1,4 @@
 package paradigms.classes;
-
 public class TA extends Student{
   private String courseSection;
 

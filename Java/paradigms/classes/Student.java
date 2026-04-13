@@ -13,7 +13,7 @@ public class Student{
 	}
 
 	// constructor
-	public Student(String [] grades, String name){
+	public Student(String name,String [] grades){
 		this.grades = grades;
 		this.name = name;
 	}

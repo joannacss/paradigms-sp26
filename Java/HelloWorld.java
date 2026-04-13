@@ -11,6 +11,6 @@ public class HelloWorld{
 class Student {
 
 }
-public class Professor{
+ class Professor{
 
 }

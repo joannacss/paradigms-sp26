@@ -8,4 +8,9 @@ public class Circle implements Shape{
 	public double calculateArea() {
 		return Math.PI * this.radius * this.radius;
 	}
+
+	@Override
+	public String toString() {
+		return "Circle radius="+ this.radius;
+	}
 }
