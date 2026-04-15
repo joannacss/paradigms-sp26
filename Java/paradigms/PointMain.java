@@ -16,6 +16,7 @@ public class PointMain {
       System.out.println(p2.equals(p3));// false
       System.out.println(p3.equals(null));// false
       System.out.println(p1.hashCode());// returns an integer number (e.g: 994)
+      System.out.println(p2.hashCode());
 
       // TODO: comparing two arrays containing objects
 

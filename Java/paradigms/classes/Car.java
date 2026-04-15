@@ -23,14 +23,14 @@ public class Car {
         if (o == null || !(o instanceof Car)) return false;
         Car car = (Car) o;
         return year == car.year &&
-                this.licensePlate.equals( car.licensePlate) &&
-                this.make.equals(car.make) &&
-                this.model.equals(car.model) &&
-                this.color.equals(car.color);
+//                Objects.equals(this.licensePlate, car.licensePlate) &&
+                Objects.equals(this.make, car.make) &&
+                Objects.equals(this.model, car.model) &&
+                Objects.equals(this.color, car.color);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(this.color);
+        return Objects.hash(this.year, this.make, this.color, this.model);
     }
 }
