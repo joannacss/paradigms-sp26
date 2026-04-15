@@ -1,3 +1,5 @@
+package paradigms.classes;
+
 import java.util.Objects;
 public class Point {
     private int x;

@@ -1,4 +1,10 @@
-public class PointApp{
+package paradigms;
+
+import paradigms.classes.Point;
+
+import java.util.Objects;
+
+public class PointMain {
 
    public static void main(String[] args) {
       Point p1 = new Point(1,2);
@@ -10,5 +16,8 @@ public class PointApp{
       System.out.println(p2.equals(p3));// false
       System.out.println(p3.equals(null));// false
       System.out.println(p1.hashCode());// returns an integer number (e.g: 994)
+
+      // TODO: comparing two arrays containing objects
+
    }
 }
