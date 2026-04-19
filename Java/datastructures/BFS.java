@@ -18,10 +18,8 @@ public class BFS {
         toVisit.add(root);
         // list of visited nodes
         List<String> result = new ArrayList<>();
-
         // set of visited nodes, to avoid getting stuck
         Set<String> visited = new HashSet<>();
-
 
         // keep visiting while there are nodes in the queue
         while(!toVisit.isEmpty()) {
