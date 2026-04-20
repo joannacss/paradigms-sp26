@@ -39,6 +39,4 @@ public class BFS {
         // returns the visited nodes, in order
         return result;
     }
-
-    
 }
