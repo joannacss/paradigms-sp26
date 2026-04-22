@@ -13,10 +13,8 @@
 
 ; map from a list of rows to:
 ; 				{Los Angeles (70.5), Honolulu (80.3), South Bend (55.8), Los Angeles (71.2) ...}
+
 ;;; first declare callback funtion `parse-row` that maps each row to {"city" (temperature)}
-
-
-;;; apply the callback function to each element in the `rows` list 
 (defn parse-row [row] (let
 																								[column (str/split row #",")
 																									city (first column)
@@ -24,6 +22,9 @@
 																									{city (list temperature)}
 																						)
 )
+
+
+;;; apply the callback function to each element in the `rows` list 
 (def rows (map parse-row rows))
 
 ; use the `reduce` function to merge temperatures by city to create a map like this:

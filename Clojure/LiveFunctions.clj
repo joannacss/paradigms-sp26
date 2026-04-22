@@ -52,7 +52,8 @@
 (defn distance [x y] (Math/sqrt (+ (* x x) (* y y))))
 (def p1 [3 4]) ; define p1 as a vector [3 4]
 (def p2 [1 2]) ; define p2 as a vector [1 2]
-(apply distance p1)
+(distance p1) ; Runtime error: wrong number of args
+(apply distance p1) ; this fixes the problem
 ; invoke distance with p1 and p2 (using get vs apply)
 
 
