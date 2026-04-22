@@ -52,12 +52,12 @@
 (defn distance [x y] (Math/sqrt (+ (* x x) (* y y))))
 (def p1 [3 4]) ; define p1 as a vector [3 4]
 (def p2 [1 2]) ; define p2 as a vector [1 2]
-(distance p1) ; Runtime error: wrong number of args
-(apply distance p1) ; this fixes the problem
+(println (apply distance p1)) ; Runtime error: wrong number of args
+; (apply distance p1) ; this fixes the problem
 ; invoke distance with p1 and p2 (using get vs apply)
 
 
 
 ; expression below is equivalent of doing `distance(p1[0], p1[1])` in Python
-; (println (distance (get p1 0) (get p1 1)))
+(println (distance (get p1 0) (get p1 1)))
 
