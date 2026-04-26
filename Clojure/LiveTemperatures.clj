@@ -13,7 +13,7 @@
 (def rows (map Float/parseFloat rows))
 
 (println rows)
-; (defn avg[p] ())
+; (defn avg[p] ())d
 
 ; print metrics
 (println (apply min rows))
